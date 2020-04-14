@@ -48,6 +48,7 @@ const Dropdown = ({ activatorText = 'Dropdown', items = [] }) => {
                 ref={activatorRef}
                 className="dropdown-activator"
                 onKeyUp={keyHandler}
+                data-testid="dropdown-activator"
             >
                 {activatorText}
             </button>
@@ -59,6 +60,7 @@ const Dropdown = ({ activatorText = 'Dropdown', items = [] }) => {
                 className={`dropdown-itemList ${isOpen ? 'active' : ''}`}
                 onKeyUp={keyHandler}
                 role="list"
+                data-testid="dropdown-itemList"
             >
                 {items.map((item, index) => {
                     return <li key={index}>
